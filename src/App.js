@@ -9,6 +9,7 @@ import ArtistPhotos from './components/ArtistPhotos'
 import AthleteBio from './components/AthleteBio'
 import AthletePhotos from './components/AthletePhotos'
 import Home from './components/Home'
+import Partnerships from './components/Partnerships'
 import Music from './components/Music'
 
 import NewsAthlete from './components/NewsAthlete'
@@ -49,6 +50,7 @@ class App extends Component {
           <Route exact path="/news/the-athlete" component={NewsAthlete}/>
           <Route exact path="/news/the-artist" component={NewsArtist}/>
           <Route exact path="/stats" component={Stats}/>
+          <Route exact path="/partnerships" component={Partnerships}/>
           <Route exact path="/page/:page" component={GeneralPage}/>
         </div>
       </Router>

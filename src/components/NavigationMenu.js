@@ -9,6 +9,7 @@ const NavigationMenu = (props) => {
                 <Link to={{ pathname: "/music"}}>Music</Link>
                 <Link to={{ pathname: "/bio/artist"}}>Bio</Link>
                 <Link to={{ pathname: "/news/the-artist"}}>News</Link>
+                <Link to={{ pathname: "/partnerships"}}>Partnerships</Link>
             </span>
         )   
     }
@@ -20,6 +21,7 @@ const NavigationMenu = (props) => {
                 <Link to={{ pathname: "/bio/athlete"}}>Bio</Link>
                 <Link to={{ pathname: "/stats"}}>NBA Stats</Link>
                 <Link to={{ pathname: "/news/the-athlete"}}>News</Link>
+                <Link to={{ pathname: "/partnerships"}}>Partnerships</Link>
                 <Link to={{ pathname: "/page/contact"}}>
                     <i className="fa fa-envelope-o"></i>
                 </Link>

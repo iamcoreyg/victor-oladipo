@@ -523,3 +523,13 @@ figure.alignright, img.alignright {
   text-decoration: none;
   border: 2px solid #fff;
 }
+
+.brand-logo {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.brand-logo img {
+  max-height: 75px;
+  width: auto;
+}
