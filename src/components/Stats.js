@@ -2,50 +2,21 @@ import React, { Component } from 'react';
 import Layout from './Layout'
 
 class Stats extends Component {
+  constructor() {
+    super()
+    this.state = {
+      stats: []
+    }
+  }
   componentDidMount() {
-    fetch('http://stats.nba.com/stats/playercareerstats/?playerID=203506&perMode=Totals')
+    fetch('https://www.jasonbase.com/things/ExoP.json')
     .then((response) => response.json())
     .then((responseJson) => {
-      console.log(responseJson.resultSets);
+      this.setState({ stats: responseJson.stats })
     })
     .catch((error) => {
       console.error(error);
     });
-  }
-
-  stats = {
-    'MPG': {
-      season: 34.5,
-      career: 33.4
-    },
-    'PPG': {
-      season: 24.4,
-      career: 17.1
-    },
-    'RPG': {
-      season: 5.4,
-      career: 4.5
-    },
-    'APG': {
-      season: 4.1,
-      career: 3.8
-    },
-    'BPG': {
-      season: 0.8,
-      career: 0.5
-    },
-    'FG%': {
-      season: 48.7,
-      career: 44.4
-    },
-    '3P%': {
-      season: 38.3,
-      career: 35.4
-    },
-    'FT%': {
-      season: 80.6,
-      career: 80.1
-    },
   }
 
   statKeys = {
@@ -68,16 +39,16 @@ class Stats extends Component {
             <h2 className="text-center">NBA Stats</h2>
             <hr />
             {
-              Object.keys(this.stats).map((stat, i) => (
+              Object.keys(this.state.stats).map((stat, i) => (
                 <div className="stat">
                   <div className="stat-value">
                     <div className="row">
                       <div className="col-6">
-                        {this.stats[stat].season}
+                        {this.state.stats[stat].season}
                         <caption>Season</caption>
                       </div>
                       <div className="col-6">
-                        {this.stats[stat].career}
+                        {this.state.stats[stat].career}
                         <caption>Career</caption>
                       </div>
                     </div>
