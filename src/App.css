@@ -18,7 +18,7 @@ h1, h2, h3, h4 {
 
 header {
   position: fixed;
-  top: 10;
+  top: 0;
   width: 100%;
   text-align: center;
   letter-spacing: 2px;
@@ -34,6 +34,22 @@ header {
   color: #ffffff;
   text-shadow: 0 0 12px #FFF;
   animation: fa-spin 2s infinite linear
+}
+
+.gallery-wrap {
+  background: #000;
+}
+
+.gallery-wrap img {
+  opacity: 0.7;
+  transition: all .3s;
+  
+}
+
+.gallery-wrap img:hover {
+  opacity: 1;
+  transform: scale(.95);
+  z-index: 100;
 }
 
 .container {
