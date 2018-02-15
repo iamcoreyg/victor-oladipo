@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Oswald:700;Source+Sans+Pro:300');
+@import url('//fonts.googleapis.com/css?family=Oswald|Roboto:400|Montserrat:400,700');
 
 
 html, body {
@@ -6,12 +6,12 @@ html, body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: grayscale;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4 { 
-  font-family: 'Oswald', sans-serif; 
+  font-family: 'Montserrat', sans-serif; 
   text-transform: uppercase; 
   letter-spacing: 1px;
   margin: 10px 0;
