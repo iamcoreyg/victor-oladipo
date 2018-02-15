@@ -10,7 +10,10 @@ import AthleteBio from './components/AthleteBio'
 import AthletePhotos from './components/AthletePhotos'
 import Home from './components/Home'
 import Music from './components/Music'
-import News from './components/News'
+
+import NewsAthlete from './components/NewsAthlete'
+import NewsArtist from './components/NewsArtist'
+
 import Stats from './components/Stats'
 import GeneralPage from './components/GeneralPage'
 
@@ -43,7 +46,8 @@ class App extends Component {
           <Route exact path="/bio/athlete" component={AthleteBio}/>
 
           <Route exact path="/music" component={Music}/>
-          <Route exact path="/news/:side" component={News}/>
+          <Route exact path="/news/the-athlete" component={NewsAthlete}/>
+          <Route exact path="/news/the-artist" component={NewsArtist}/>
           <Route exact path="/stats" component={Stats}/>
           <Route exact path="/page/:page" component={GeneralPage}/>
         </div>

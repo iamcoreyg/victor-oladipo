@@ -74,8 +74,8 @@ class PhotosLayout extends Component {
       <Layout loading={this.state.loading}>
           <div className="gallery-wrap">
             <div className="gallery-content">
-              <PageHeader title={`${this.props.side.replace('-', ' ')} // Photos`} />
-              <div className="gallery-wrap padding-bottom">
+              <PageHeader title=' ' />
+              <div className="padding-bottom">
                 <Gallery photos={this.state.photos} onClick={this.openLightbox}/>
                 <Lightbox images={this.state.photos}
                     onClose={this.closeLightbox}

@@ -40,6 +40,7 @@ class Layout extends Component {
             <span className="mobile-menu-section-heading small-spaced">Athlete</span>
             <NavigationMenu menu="athlete"/>
           </nav>
+
           {this.props.children}
           <Footer />
         </div>
