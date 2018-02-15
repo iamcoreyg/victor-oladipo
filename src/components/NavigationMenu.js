@@ -20,7 +20,7 @@ const NavigationMenu = (props) => {
                 <Link to={{ pathname: "/bio/athlete"}}>Bio</Link>
                 <Link to={{ pathname: "/stats"}}>NBA Stats</Link>
                 <Link to={{ pathname: "/news/the-athlete"}}>News</Link>
-                <Link to={{ pathname: "/contact"}}>
+                <Link to={{ pathname: "/page/contact"}}>
                     <i className="fa fa-envelope-o"></i>
                 </Link>
             </span>

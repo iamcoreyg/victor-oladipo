@@ -63,7 +63,7 @@ class ArtistBio extends Component {
           <div className="bio-content">
             <div className="container">
               
-              <PageHeader title={`${this.props.side.replace('-', ' ')} BIOGRAPHY  `} />
+              <center><PageHeader title={`${this.props.side.replace('-', ' ')} BIOGRAPHY  `} /></center>
               {
                 this.state.photos.length && <Slider {...settings}>
                 {this.state.photos.reverse().map((image, i) => 
