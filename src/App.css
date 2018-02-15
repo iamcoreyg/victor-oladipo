@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Oswald|Roboto:400|Montserrat:400,700');
+@import url('//fonts.googleapis.com/css?family=Oswald:700|Roboto:400,700|Montserrat:400');
 
 
 html, body {
@@ -14,7 +14,7 @@ h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif; 
   text-transform: uppercase; 
   letter-spacing: 1px;
-  margin: 10px 0;
+  margin: 20px 0 10px;
 }
 
 header {
@@ -72,7 +72,7 @@ header {
 }
 
 .container {
-  max-width: 720px;
+  max-width: 1024px;
 }
 
 #name {
@@ -170,7 +170,7 @@ header {
 .content-wrap {
   min-height: calc(100vh - 105px);
   background:#fff;
-  padding-top: 90px;
+  padding-top: 55px;
   padding-bottom: 10px;
 }
 
@@ -439,4 +439,79 @@ caption {
 
 .stat:hover .stat-name-abbr {
   opacity: 1;
+}
+
+.the-artist-bio,
+.the-athlete-bio {
+  min-height: 100vh;
+  padding-bottom: 0;
+}
+
+figure.alignleft, img.alignleft {
+  float: left;
+  margin-right: 25px;
+  max-width: 50%;
+}
+
+figure.alignright, img.alignright {
+  float: right;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+@media(min-width: 767px) {
+  max-width: 50%;
+}
+
+.the-artist-bio {
+  background: url('http://victoroladipo.com/content-api/wp-content/uploads/2018/02/victor-olapido-the-artist-bio-1.jpg') fixed no-repeat;
+  background-size: cover;
+}
+
+.the-athlete-bio {
+  background: url('images/athlete.jpg') fixed no-repeat;
+  background-size: cover;
+}
+
+.bio-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bio-content {
+  width: 100%;
+  min-height: 100vh;
+  background:rgba(0,0,0,0.8);
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.bio-content p {
+  opacity: .95;
+  font-size: 15pt;
+}
+
+.bio-content p, .bio-content h1, .bio-content h2, .bio-content h3 {
+  color: #fff;
+}
+
+.block-btn {
+  background: white;
+  padding: 16px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  color: #111;
+  margin: auto;
+  max-width: 350px;
+  transition: all .25s;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  font-weight: 700;
+}
+
+.block-btn:hover {
+  color: #fff;
+  background: #000;
+  text-decoration: none;
 }

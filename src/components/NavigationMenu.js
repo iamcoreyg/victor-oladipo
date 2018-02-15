@@ -7,7 +7,7 @@ const NavigationMenu = (props) => {
             <span>
                 <Link to={{ pathname: "/photos/artist"}}>Photos</Link>
                 <Link to={{ pathname: "/music"}}>Music</Link>
-                <Link to={{ pathname: "/artist/bio"}}>Bio</Link>
+                <Link to={{ pathname: "/bio/artist"}}>Bio</Link>
                 <Link to={{ pathname: "/news/the-artist"}}>News</Link>
             </span>
         )   
