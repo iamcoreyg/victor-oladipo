@@ -20,9 +20,7 @@ class Stats extends Component {
 
             <h1 className="text-center">Stats</h1>
             <hr />
-            <h2>Hello</h2>
-            <h3>Hello</h3>
-            <p>Hello</p>
+            <p>Coming Soon</p>
           </div>
         </div>
       </Layout>

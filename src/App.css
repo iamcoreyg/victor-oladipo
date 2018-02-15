@@ -9,7 +9,12 @@ html, body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+h1, h2, h3, h4 { 
+  font-family: 'Oswald', sans-serif; 
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
 
 header {
   position: fixed;
@@ -26,7 +31,9 @@ header {
 }
 
 .fa-spin {
-  color: blue;
+  color: #ffffff;
+  text-shadow: 0 0 12px #FFF;
+  animation: fa-spin 2s infinite linear
 }
 
 .container {
@@ -118,6 +125,10 @@ header {
 
 .margin-bottom {
   margin-bottom: 25px;
+}
+
+.padding-bottom {
+  padding-bottom: 25px;
 }
 
 @media(min-width: 768px) {

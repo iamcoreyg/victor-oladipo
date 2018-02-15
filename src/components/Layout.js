@@ -7,9 +7,9 @@ class Layout extends Component {
   constructor(props) {
     super();
     this.state = {
-      menuIsOpen: true,
-      transitioning: true
-      
+      menuIsOpen: props.loading,
+      transitioning: props.loading,
+      loading: props.loading
     }
     this.menuHandler = this.menuHandler.bind(this);
   }
@@ -23,11 +23,9 @@ class Layout extends Component {
     this.setState({ menuIsOpen: !this.state.menuIsOpen })
   }
 
-  componentDidMount() {
-    setTimeout(function() {
-      this.setState({ menuIsOpen: false })
-      this.setState({ transitioning: false })
-    }.bind(this), 700)
+  componentWillReceiveProps(props) {
+    this.setState({ menuIsOpen: props.loading })
+    this.setState({ transitioning: props.loading })
   }
   
   render() {
@@ -37,10 +35,10 @@ class Layout extends Component {
 
           <nav className={`mobile-menu-list ${this.stateClass('menuIsOpen', 'open')}`}>
             <span className="mobile-menu-section-heading small-spaced">Artist</span>
-            <NavigationMenu menu="artist" menuHandler={this.menuHandler} />
+            <NavigationMenu menu="artist" />
 
             <span className="mobile-menu-section-heading small-spaced">Athlete</span>
-            <NavigationMenu menu="athlete" menuHandler={this.menuHandler} />
+            <NavigationMenu menu="athlete"/>
           </nav>
           {this.props.children}
           <Footer />
