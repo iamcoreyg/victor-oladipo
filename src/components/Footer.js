@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="col-sm-4 foot-left">
                         Feathery Music Group <br />
                         &copy; Copyright 2018 | All Rights Reserved. <br />
-                        <a href="./">Website Desigend & Powered by CG3Media</a>
+                        <a href="http://cg3media.com/" target="_blank">Crafted by CG3Media</a>
                     </div>
                     <div className="col-sm-4 foot-center">
                         <Link to={{ pathname: "/"}}>Home</Link>
