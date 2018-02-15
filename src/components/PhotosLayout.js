@@ -73,16 +73,18 @@ class PhotosLayout extends Component {
     return (
       <Layout loading={this.state.loading}>
           <div class="gallery-wrap">
-            <PageHeader title={`${this.props.side.replace('-', ' ')} // Photos`} />
-            <div className="gallery-wrap padding-bottom">
-              <Gallery photos={this.state.photos} onClick={this.openLightbox}/>
-              <Lightbox images={this.state.photos}
-                  onClose={this.closeLightbox}
-                  onClickPrev={this.gotoPrevious}
-                  onClickNext={this.gotoNext}
-                  currentImage={this.state.currentImage}
-                  isOpen={this.state.lightboxIsOpen}
-              />
+            <div class="gallery-content">
+              <PageHeader title={`${this.props.side.replace('-', ' ')} // Photos`} />
+              <div className="gallery-wrap padding-bottom">
+                <Gallery photos={this.state.photos} onClick={this.openLightbox}/>
+                <Lightbox images={this.state.photos}
+                    onClose={this.closeLightbox}
+                    onClickPrev={this.gotoPrevious}
+                    onClickNext={this.gotoNext}
+                    currentImage={this.state.currentImage}
+                    isOpen={this.state.lightboxIsOpen}
+                />
+                </div>
             </div>
           </div>
       </Layout> 
