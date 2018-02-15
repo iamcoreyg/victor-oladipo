@@ -33,7 +33,7 @@ class Stats extends Component {
   render() {
     return (
       <Layout>
-        <div className="content-wrap">
+        <div className="content-wrap black-bg">
           <div className="container">
 
             <h2 className="text-center">NBA Stats</h2>
@@ -59,7 +59,7 @@ class Stats extends Component {
               ))
             }
             <hr />
-            <center><a href="http://www.nba.com/players/victor/oladipo/203506" target="_blank">Official NBA Profile</a></center>
+            <center><a href="http://www.nba.com/players/victor/oladipo/203506" target="_blank" className="block-btn">Official NBA Profile</a></center>
           </div>
         </div>
       </Layout>

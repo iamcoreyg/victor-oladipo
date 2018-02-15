@@ -411,6 +411,12 @@ caption {
   border-bottom: 1px solid #ccc;
 }
 
+@media(min-width: 800px) {
+  .stat {
+    width: 20%;
+  }
+}
+
 .stat caption {
   text-align: center;
   margin: 0;
@@ -508,10 +514,12 @@ figure.alignright, img.alignright {
   text-transform: uppercase;
   font-family: 'Oswald';
   font-weight: 700;
+  border: 2px solid #fff;
 }
 
 .block-btn:hover {
   color: #fff;
   background: #000;
   text-decoration: none;
+  border: 2px solid #fff;
 }
