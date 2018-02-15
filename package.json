@@ -18,6 +18,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "git add . && git commit -m 'update' && git push && npm run build && mv build/index.html build/200.html && surge build vic-ola.surge.sh"
+    "deploy": "git add . && git commit -m 'update' && git push && npm run build && mv build/index.html build/200.html && rm build/service-worker.js && surge build vic-ola.surge.sh"
   }
 }
