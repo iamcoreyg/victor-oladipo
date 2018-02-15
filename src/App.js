@@ -8,11 +8,12 @@ import ArtistPhotos from './components/ArtistPhotos'
 
 import AthleteBio from './components/AthleteBio'
 import AthletePhotos from './components/AthletePhotos'
-import Contact from './components/Contact'
 import Home from './components/Home'
 import Music from './components/Music'
 import News from './components/News'
 import Stats from './components/Stats'
+import GeneralPage from './components/GeneralPage'
+
 import './App.css';
 
 class App extends Component {
@@ -44,7 +45,7 @@ class App extends Component {
           <Route exact path="/music" component={Music}/>
           <Route exact path="/news/:side" component={News}/>
           <Route exact path="/stats" component={Stats}/>
-          <Route exact path="/contact" component={Contact}/>
+          <Route exact path="/page/:page" component={GeneralPage}/>
         </div>
       </Router>
     );

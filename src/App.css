@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:700;Source+Sans+Pro:300');
+@import url('//fonts.googleapis.com/css?family=Oswald:700;Source+Sans+Pro:300');
 
 
 html, body {
@@ -311,7 +311,11 @@ footer .social:hover {
     display: none;
   }
 
-  .foot-right, .foot-center {
-    width: 50%;
+  .foot-right {
+    width: 60%;
+  }
+
+  .foot-center {
+    width: 40%;
   }
 }
