@@ -323,8 +323,8 @@ footer .social:hover {
 }
 
 @media(max-width: 767px) {
-  .logo {
-    display: none;
+  #name {
+    margin-top: 25px;
   }
 
   .home-wrap {
