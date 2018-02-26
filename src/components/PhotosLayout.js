@@ -40,6 +40,14 @@ class PhotosLayout extends Component {
     });
   }
 
+  getImageById(attachments, id) {
+    for(let i = 0; i < attachments.length; i++) {
+      if (attachments[i].id == id) {
+        return i
+      }   
+    }
+  }
+
   componentDidMount() {
     fetch(`http://victoroladipo.com/content-api/index.php/${this.props.side}/photos/?json=1`,
     {
@@ -52,17 +60,36 @@ class PhotosLayout extends Component {
     .then((data) => {
       this.setState({ content: data.page.content })
 
-      data.page.attachments.forEach((image) => {
-        this.setState({ 
-          photos: this.state.photos.concat([
-            {
-              src: image.images.full.url,
-              width: image.images.full.width/image.images.full.height,
-              height: 1
-            }
-          ]) 
+      let attachments = data.page.custom_fields.attachments
+      if (attachments) {
+        let attachment_ids = JSON.parse(attachments).attachments.map(function(x) { return x.id })
+        attachment_ids.forEach((id) => {
+          let attachment = this.getImageById(data.page.attachments, id);
+          let image = data.page.attachments[attachment]
+          
+          this.setState({ 
+            photos: this.state.photos.concat([
+              {
+                src: image.images.full.url,
+                width: image.images.full.width/image.images.full.height,
+                height: 1
+              }
+            ]) 
+          })
         })
-      })
+      }
+
+      // data.page.attachments.forEach((image) => {
+      //   this.setState({ 
+      //     photos: this.state.photos.concat([
+      //       {
+      //         src: image.images.full.url,
+      //         width: image.images.full.width/image.images.full.height,
+      //         height: 1
+      //       }
+      //     ]) 
+      //   })
+      // })
 
       this.setState({ loading: false })
 
